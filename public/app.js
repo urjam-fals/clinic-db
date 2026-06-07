@@ -6,12 +6,17 @@ function showPage(pageId) {
     document.getElementById('page').classList.add('active');
 }
 
-function toggleMenu() {
-    const menu = document.getElementById("menu");
+// function toggleMobileMenu() {
+//     const menu = document.getElementById("menu");
+//     menu.classList.toggle("w3-show");
 
-    if (menu.classList.contains("w3-show")) {
-        menu.classList.remove("w3-show");
-    } else {
-        menu.classList.add("w3-show");
-    }
+// }
+
+// function toggleDesktopMenu() {
+//     const menu = document.getElementById("menu-desktop");
+//     menu.classList.toggle("w3-show");
+// }
+
+function toggleMenu(id) {
+    document.getElementById(id).classList.toggle("w3-show");
 }

@@ -10,9 +10,17 @@
     <body>
         <div class="w3-bar w3-blue w3-padding">
             <span class="w3-bar-item w3-bold">Clinic Consultation Logging System</span>
-            <div class="w3-dropdown-click w3-right">
-                <button class="w3-button" onclick="toggleMenu()">Clinic Management &#9662;</button>
-                <div id="menu" class="w3-dropdown-content w3-bar-block w3-card-4">
+            
+            <button class="w3-bar-item w3-button w3-right w3-hide-large" onclick="toggleMenu('menu')">☰</button>
+            <div id="menu" class="w3-bar-block w3-blue w3-hide w3-hide-large">
+                <a class="w3-bar-item w3-button" href="#/doctors">Doctors</a>
+                <a class="w3-bar-item w3-button" href="#/patients">Patients</a>
+                <a class="w3-bar-item w3-button" href="#/consult">Consultation Transacitions</a>
+                <a class="w3-bar-item w3-button" href="#/inquiry">Consultation Inquiry</a>   
+            </div>
+            <div class="w3-dropdown-click w3-right w3-hide-small">
+                <button class="w3-button" onclick="toggleMenu('menu-desktop')">Clinic Management &#9662;</button>
+                <div id="menu-desktop" class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a class="w3-bar-item w3-button" href="#/doctors">Doctors</a>
                     <a class="w3-bar-item w3-button" href="#/patients">Patients</a>
                     <a class="w3-bar-item w3-button" href="#/consult">Consultation Transacitions</a>
@@ -21,7 +29,7 @@
             </div>
         </div>
         <div class="w3-container w3-padding">
-            <section class= "page active" id="home-page">
+            <section class= "page active w3-margin-top" id="home-page">
                 <h2 class="w3-center">Clinic Consultations Logging System</h2>
                 <div class="w3-card w3-padding w3-margin-bottom">
                     <label>First Name</label>
@@ -29,56 +37,59 @@
                     <button class="w3-button w3-green w3-margin-right">Save</button>
                     <button class="w3-button w3-gray">Cancel</button>
                 </div>
+
+                <div class="w3-responsive">
+                    <table class="w3-table w3-bordered w3-striped w3-white">
+                        <thead class="w3-blue">
+                            <tr>
+                                <th>ID No.</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>100</td>
+                                <td>Marju</td>
+                                <td>Faller</td>
+                                <td>
+                                    <button class="w3-button w3-small w3-blue">View</button>
+                                    <button class="w3-button w3-small w3-yellow">Edit</button>
+                                    <button class="w3-button w3-small w3-red">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>200</td>
+                                <td>Jason</td>
+                                <td>Faller</td>
+                                <td>
+                                    <button class="w3-button w3-small w3-blue">View</button>
+                                    <button class="w3-button w3-small w3-yellow">Edit</button>
+                                    <button class="w3-button w3-small w3-red">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                
-                <table class="w3-table w3-bordered w3-striped w3-white">
-                    <thead class="w3-blue">
-                        <tr>
-                            <th>ID No.</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>100</td>
-                            <td>Marju</td>
-                            <td>Faller</td>
-                            <td>
-                                <button class="w3-button w3-small w3-blue">View</button>
-                                <button class="w3-button w3-small w3-yellow">Edit</button>
-                                <button class="w3-button w3-small w3-red">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>200</td>
-                            <td>Jason</td>
-                            <td>Faller</td>
-                            <td>
-                                <button class="w3-button w3-small w3-blue">View</button>
-                                <button class="w3-button w3-small w3-yellow">Edit</button>
-                                <button class="w3-button w3-small w3-red">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
-            <section class= "page" id="doctor-page">
+            <section class= "page w3-margin-top" id="doctor-page">
                 <div class="w3-card w3-padding">
                     <h2 class="w3-center">Doctor Management</h2>
                 </div>    
             </section>
-            <section class= "page" id="patient-page">
+            <section class= "page w3-margin-top" id="patient-page">
                 <div class="w3-card w3-padding">
                     <h2 class="w3-center">Patient Management</h2>
                 </div>
             </section>
-            <section class= "page" id="consult-transaction-page">
-                <div class="w3-cardw3-padding">
+            <section class= "page w3-margin-top" id="consult-transaction-page">
+                <div class="w3-card w3-padding">
                     <h2 class="w3-center">Consultation Transaction Management</h2>
                 </div>
             </section>
-            <section class= "page" id="consult-inquiry-page">
+            <section class= "page w3-margin-top" id="consult-inquiry-page">
                 <div class="w3-card w3-padding">
                     <h2 class="w3-center">Consultation Inquiry Management</h2>
                 </div>
